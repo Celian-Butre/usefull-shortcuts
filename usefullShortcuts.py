@@ -4,7 +4,7 @@ keyboard = Controller()
 
 typed_characters = []
 
-substitutionLists = [["jprint", 'System.out.print("']]
+substitutionLists = [["jprint", 'System.out.print("");', 3]]
 
 def backspace():
     keyboard.press(Key.backspace)
@@ -38,6 +38,10 @@ def on_press(key):
                         backspace()
                         time.sleep(0.1)
                     printWord(x[1])
+                    for y in range(x[2]):
+                        keyboard.press(Key.left)
+                        keyboard.release(Key.left)
+                        time.sleep(0.1)
                 # You can add your handling logic here (e.g., prevent further input)
 
     except AttributeError:
