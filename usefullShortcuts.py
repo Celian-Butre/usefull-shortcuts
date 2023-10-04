@@ -4,7 +4,7 @@ keyboard = Controller()
 
 typed_characters = []
 
-substitutionLists = [["jprint", 'System.out.print("");', 3]]
+substitutionLists = [["jprint", 'System.out.print();', 2]]
 
 def backspace():
     keyboard.press(Key.backspace)
